@@ -1,0 +1,45 @@
+{
+  "name": "fuel-delivery-app",
+  "version": "1.0.0",
+  "description": "A fuel delivery service similar to Uber for petrol and diesel",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-server": "npm install",
+    "install-all": "npm run install-server && npm run install-client"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "socket.io": "^4.7.2",
+    "stripe": "^13.5.0",
+    "nodemailer": "^6.9.4",
+    "multer": "^1.4.5-lts.1",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "fuel",
+    "delivery",
+    "petrol",
+    "diesel",
+    "uber",
+    "on-demand"
+  ],
+  "author": "Fuel Delivery Team",
+  "license": "MIT"
+}
